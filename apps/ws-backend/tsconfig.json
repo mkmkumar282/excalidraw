@@ -5,7 +5,7 @@
         "rootDir": "src"
     },
     "references": [
-        { "path": "../../packages/db" },
-        { "path": "../../packages/backend-common" }
+        { "path": "../../packages/backend-common" },
+        { "path": "../../packages/db" }
     ]
 }
