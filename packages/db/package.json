@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "exports": {
-    "./client": "./src/index.ts"
+    "./client": "./dist/index.js"
   },
   "scripts": {
     "postinstall": "prisma generate",
