@@ -63,3 +63,6 @@ CLAUDE.md
 # Duplicate lock files in sub-apps (root pnpm-lock.yaml is the source of truth)
 apps/*/package-lock.json
 apps/*/yarn.lock
+
+# Removed apps
+apps/web/
