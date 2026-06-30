@@ -1,0 +1,2 @@
+export const JWT_SECRET = process.env.JWT_SECRET || "default_fallback_secret_please_change_in_production";
+export const DATABASE_URL = process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/excalidraw?sslmode=disable";

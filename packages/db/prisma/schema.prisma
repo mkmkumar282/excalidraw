@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id             String          @id @default(uuid())
+  email          String          @unique
+  password       String
+  name           String
+  photo          String?
+  canvasRooms    CanvasRoom[]  
+  canvasElements CanvasElement[]
+}
+
+model CanvasRoom {
+  id        Int             @id @default(autoincrement())
+  slug      String          @unique
+  createdAt DateTime        @default(now())
+  adminId   String
+  admin     User            @relation(fields: [adminId], references: [id])
+  elements  CanvasElement[]    
+
+  @@map("Room")
+}
+
+model CanvasElement {
+  id           Int        @id @default(autoincrement())
+  elementData  String     @map("message")
+  userId       String
+  canvasRoomId Int        @map("roomId")
+  canvasRoom   CanvasRoom @relation(fields: [canvasRoomId], references: [id])
+  user         User       @relation(fields: [userId], references: [id])
+
+  @@map("Chat")
+}
+
