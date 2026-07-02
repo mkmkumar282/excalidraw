@@ -6,8 +6,5 @@
         "composite": true,
         "incremental": true
     },
-    "include": ["src"],
-    "references": [
-        { "path": "../backend-common" }
-    ]
+    "include": ["src"]
 }

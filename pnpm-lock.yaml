@@ -72,9 +72,6 @@ importers:
 
   apps/http-backend:
     dependencies:
-      '@repo/backend-common':
-        specifier: workspace:*
-        version: link:../../packages/backend-common
       '@repo/common':
         specifier: workspace:*
         version: link:../../packages/common
@@ -115,9 +112,6 @@ importers:
 
   apps/ws-backend:
     dependencies:
-      '@repo/backend-common':
-        specifier: workspace:*
-        version: link:../../packages/backend-common
       '@repo/common':
         specifier: workspace:*
         version: link:../../packages/common
@@ -144,16 +138,6 @@ importers:
         specifier: ^4.22.4
         version: 4.22.4
 
-  packages/backend-common:
-    dependencies:
-      '@types/node':
-        specifier: ^22.15.3
-        version: 22.15.3
-    devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-
   packages/common:
     dependencies:
       zod:
@@ -172,9 +156,6 @@ importers:
       '@prisma/client':
         specifier: ^7.8.0
         version: 7.8.0(prisma@7.8.0(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.2))(typescript@5.9.2)
-      '@repo/backend-common':
-        specifier: workspace:*
-        version: link:../backend-common
       pg:
         specifier: ^8.22.0
         version: 8.22.0

@@ -2,7 +2,7 @@ import express from "express";
 const app= express();
 import jwt from "jsonwebtoken";
 import {Request, Response} from "express";
-import { JWT_SECRET } from "@repo/backend-common/config";
+import { JWT_SECRET } from "./config";
 import { middleware } from "./middleware";
 import { CreateUserSchema, SignInSchema, CreateCanvasRoomSchema } from "@repo/common/types";
 import {getPrisma} from "@repo/db/client";

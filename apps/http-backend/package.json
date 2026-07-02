@@ -9,7 +9,6 @@
     "dev": "tsx --env-file .env src/index.ts"
   },
   "dependencies": {
-    "@repo/backend-common": "workspace:*",
     "@repo/common": "workspace:*",
     "@repo/db": "workspace:*",
     "@types/jsonwebtoken": "^9.0.10",
